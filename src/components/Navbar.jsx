@@ -1,17 +1,12 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo/QNAYDS_LOGO.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "../assets/logo/QNAYDS_LOGO.webp";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [courseOpen, setCourseOpen] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
-
-  const links = [
-    { name: "About", path: "/about" },
-    { name: "Courses", path: "/courses" },
-    { name: "Contact", path: "/contact" },
-  ];
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 balance">
@@ -30,35 +25,194 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 h-full">
-          {links.map((link) => {
-            const isActive = location.pathname === link.path;
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`text-md  font-medium transition-colors duration-200 relative py-2 ${
-                  isActive
-                    ? "text-cyan-600"
-                    : "text-gray-600 hover:text-gray-900"
+          <Link
+            to="/about"
+            className="text-md font-medium text-gray-600 hover:text-gray-900"
+          >
+            About
+          </Link>
+
+          <div className="relative">
+            <button
+              onClick={() => setCourseOpen(!courseOpen)}
+              className="flex items-center gap-1 text-md font-medium text-gray-600 hover:text-gray-900"
+            >
+              Courses
+              <svg
+                className={`w-4 h-4 transition-transform ${
+                  courseOpen ? "rotate-180" : ""
                 }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                {link.name}
-                {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-500 rounded-full" />
-                )}
-              </Link>
-            );
-          })}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            {courseOpen && (
+              <div
+                className="absolute top-full left-0 mt-3 w-80 bg-white rounded-2xl overflow-hidden"
+                style={{
+                  border: "1px solid #bae6fd",
+                  boxShadow:
+                    "0 16px 48px rgba(14,165,233,0.15), 0 4px 16px rgba(0,0,0,0.06)",
+                }}
+              >
+                {/* header strip */}
+                <div
+                  style={{
+                    background: "linear-gradient(135deg,#e0f2fe,#dbeafe)",
+                    padding: "8px 20px",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: "0.08em",
+                      color: "#0284c7",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Our Programs
+                  </span>
+                </div>
+
+                <Link
+                  to="/courses/CEH"
+                  className="flex items-center gap-4 px-5 py-4 transition-all"
+                  onClick={() => setCourseOpen(!courseOpen)}
+                  style={{ borderBottom: "1px solid #f0f9ff" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background = "#f0f9ff")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background = "transparent")
+                  }
+                >
+                  <div
+                    style={{
+                      width: 38,
+                      height: 38,
+                      borderRadius: 10,
+                      background: "linear-gradient(135deg,#0ea5e9,#0284c7)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      fontSize: 18,
+                    }}
+                  >
+                    🛡️
+                  </div>
+                  <div>
+                    <div
+                      style={{
+                        fontWeight: 600,
+                        fontSize: 14,
+                        color: "#0f172a",
+                      }}
+                    >
+                      Certified Ethical Hacker
+                    </div>
+                    <div
+                      style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}
+                    >
+                      CEH Certification Program
+                    </div>
+                  </div>
+                </Link>
+
+                <Link
+                  to="/courses/QCSP"
+                  className="flex items-center gap-4 px-5 py-4 transition-all"
+                  onClick={() => setCourseOpen(!courseOpen)}
+                  style={{ borderBottom: "1px solid #f0f9ff" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background = "#f0f9ff")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background = "transparent")
+                  }
+                >
+                  <div
+                    style={{
+                      width: 38,
+                      height: 38,
+                      borderRadius: 10,
+                      background: "linear-gradient(135deg,#0284c7,#1e40af)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      fontSize: 18,
+                    }}
+                  >
+                    🔬
+                  </div>
+                  <div>
+                    <div
+                      style={{
+                        fontWeight: 600,
+                        fontSize: 14,
+                        color: "#0f172a",
+                      }}
+                    >
+                      Advanced Penetration Testing
+                    </div>
+                    <div
+                      style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}
+                    >
+                      CPT Certification Program
+                    </div>
+                  </div>
+                </Link>
+
+                {/* view all footer */}
+                <Link
+                  to="/courses"
+                  className="flex items-center justify-between px-5 py-3 transition-all"
+                  style={{ background: "#f8fafc" }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background = "#e0f2fe")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background = "#f8fafc")
+                  }
+                >
+                  <span
+                    style={{ fontSize: 13, fontWeight: 600, color: "#0ea5e9" }}
+                  >
+                    View all courses
+                  </span>
+                  <span style={{ color: "#0ea5e9" }}>→</span>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            to="/contact"
+            className="text-md font-medium text-gray-600 hover:text-gray-900"
+          >
+            Contact
+          </Link>
         </div>
 
         {/* Desktop CTA */}
         <div className="hidden md:block ">
-          <Link
-            to="/courses"
+          <button
+            onClick={() => navigate("/contact")}
             className="text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 bg-cyan-500 text-white hover:bg-cyan-600 shadow-sm"
           >
-            Get Started
-          </Link>
+            Start Learning
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -102,29 +256,81 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 px-6 py-4 flex flex-col gap-4 shadow-lg absolute w-full left-0 transition-all duration-300">
-          {links.map((link) => {
-            const isActive = location.pathname === link.path;
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={() => setMenuOpen(false)}
-                className={`text-sm font-medium transition-colors ${
-                  isActive
-                    ? "text-cyan-600"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
+          <div className="flex flex-col gap-4 w-full">
+            <Link
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm font-medium text-gray-600 hover:text-cyan-600 transition-colors"
+            >
+              About
+            </Link>
+
+            <div className="w-full">
+              <button
+                onClick={() => setCourseOpen(!courseOpen)}
+                className="flex items-center justify-between w-full text-sm font-medium text-gray-600 hover:text-cyan-600 transition-colors"
               >
-                {link.name}
-              </Link>
-            );
-          })}
+                <span>Courses</span>
+
+                <svg
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    courseOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {courseOpen && (
+                <div className="mt-3 ml-4 flex flex-col gap-3 border-l-2 border-cyan-200 pl-4">
+                  <Link
+                    to="/courses/CEH"
+                    onClick={() => {
+                      setMenuOpen(false);
+                      setCourseOpen(false);
+                    }}
+                    className="text-sm text-gray-600 hover:text-cyan-600"
+                  >
+                    Certified Ethical Hacker (CEH)
+                  </Link>
+
+                  <Link
+                    to="/courses/QCSP"
+                    onClick={() => {
+                      setMenuOpen(false);
+                      setCourseOpen(false);
+                    }}
+                    className="text-sm text-gray-600 hover:text-cyan-600"
+                  >
+                    Advanced Penetration Testing
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm font-medium text-gray-600 hover:text-cyan-600 transition-colors"
+            >
+              Contact
+            </Link>
+          </div>
+
           <Link
-            to="/courses"
+            to="/contact"
             onClick={() => setMenuOpen(false)}
             className="text-sm font-semibold px-5 py-2.5 rounded-lg bg-cyan-500 text-white hover:bg-cyan-600 transition-colors text-center shadow-sm w-full"
           >
-            Get Started
+            Start Learning
           </Link>
         </div>
       )}
