@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/logo/QNAYDS_LOGO.webp";
+import logo from "../assets/logo/QNAYDS_LOGO.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
