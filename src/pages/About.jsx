@@ -1,30 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SuccessImg from "../assets/About/Success_Img.webp";
+import RishanNk from "../assets/About/Rishan_NK.webp";
+import SawadKt from "../assets/About/Sawad_KT.webp";
 
 // Reuse your ImgBox component
-const ImgBox = ({ label, height = "h-64", className = "" }) => (
+const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
   <div
-    className={`${height} ${className} flex flex-col items-center justify-center rounded-xl gap-2`}
-    style={{ background: "#f0f6ff", border: "2px dashed #93c5fd" }}
+    className={`${height} ${className} rounded-2xl overflow-hidden`}
+    style={{
+      background: "linear-gradient(135deg,#e0f2fe,#f0f9ff)",
+      border: "2px dashed #7dd3fc",
+    }}
   >
-    <svg
-      className="w-8 h-8"
-      style={{ color: "#93c5fd" }}
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.5}
-        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-      />
-    </svg>
+    {src ? (
+      <img src={src} alt={label} className="w-full h-full object-cover" />
+    ) : (
+      <div className="h-full flex flex-col items-center justify-center gap-2">
+        <svg
+          className="w-8 h-8"
+          style={{ color: "#7dd3fc" }}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
 
-    <span className="text-xs text-center px-4" style={{ color: "#93c5fd" }}>
-      {label}
-    </span>
+        <span
+          className="text-xs text-center px-4 font-medium"
+          style={{ color: "#7dd3fc" }}
+        >
+          {label}
+        </span>
+      </div>
+    )}
   </div>
 );
 
@@ -97,7 +112,11 @@ const About = () => {
 
       {/* WHO WE ARE */}
       <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <ImgBox label="QNAYDS Team / Office Image" height="h-80" />
+        <ImgBox
+          src={SuccessImg}
+          label="QNAYDS Team / Office Image"
+          height="h-130"
+        />
 
         <div>
           <div
@@ -248,7 +267,12 @@ const About = () => {
               border: "1px solid #e2e8f0",
             }}
           >
-            <ImgBox label="Rishan NK" height="h-64" className="mb-4" />
+            <ImgBox
+              src={RishanNk}
+              label="Rishan NK"
+              height="h-130"
+              className="mb-4"
+            />
 
             <h3 className="text-xl font-bold">Rishan NK</h3>
 
@@ -262,7 +286,12 @@ const About = () => {
               border: "1px solid #e2e8f0",
             }}
           >
-            <ImgBox label="Sawad KT" height="h-64" className="mb-4" />
+            <ImgBox
+              src={SawadKt}
+              label="Sawad KT"
+              height="h-130"
+              className="mb-4"
+            />
 
             <h3 className="text-xl font-bold">Sawad KT</h3>
 
