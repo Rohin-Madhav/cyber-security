@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import cehImage from "../assets/Home/CEH_Learning_img.webp";
 import linuxImg from "../assets/Home/Linux_img.webp";
 import NitCalicutImg from "../assets/logo/NIT_Calicut_Logo.png";
 import GecThrissurImg from "../assets/logo/GEC_Thrissur_logo.png";
@@ -12,13 +11,13 @@ import MccBlrImg from "../assets/logo/MCC_Blr_logo.png";
 import ChristImg from "../assets/logo/Christ_logo.png";
 import CollageIMg3 from "../assets/logo/Collage_logo_3.png";
 import CollageIMg4 from "../assets/logo/Collage_logo_4.png";
-import AicteLogo from "../assets/logo/AICTE_Logo.png"
-import MsmeLogo from "../assets/logo/MSME_Logo.png"
-import StartupIndLogo from "../assets/logo/StartUpIndia_Logo.png"
-import StartupKlLogo from "../assets/logo/StartUpMission.png"
-import TbiLogo from "../assets/logo/TBI_Logo.png"
+import AicteLogo from "../assets/logo/AICTE_Logo.png";
+import MsmeLogo from "../assets/logo/MSME_Logo.png";
+import StartupIndLogo from "../assets/logo/StartUpIndia_Logo.png";
+import StartupKlLogo from "../assets/logo/StartUpMission.png";
+import TbiLogo from "../assets/logo/TBI_Logo.png";
 import heroVideo from "../assets/Videos/cyber-hero.mp4";
-import VedioPlayer from "../components/VedioPlayer"
+import VedioPlayer from "../components/VedioPlayer";
 
 // ── IMAGE PLACEHOLDER ─────────────────────────────────
 const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
@@ -26,7 +25,7 @@ const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
     className={`${height} ${className} rounded-2xl overflow-hidden`}
     style={{
       background: "linear-gradient(135deg,#e0f2fe,#f0f9ff)",
-      border: "2px dashed #7dd3fc",
+      border: "none",
     }}
   >
     {src ? (
@@ -155,9 +154,10 @@ const WHY_CYBER = [
 const COURSES = [
   {
     title: "Ethical Hacking Mastery",
-    duration: "15 Days",
+    duration: "30 Days",
     level: "Beginner to Intermediate",
     tag: "🔥 Most Popular",
+    path: "/courses/CEH",
     desc: "Learn ethical hacking fundamentals through practical labs, Linux, networking, OSINT, social engineering, cryptography, and red teaming exercises.",
     topics: [
       "Kali Linux & Termux",
@@ -173,6 +173,7 @@ const COURSES = [
     duration: "4-6 Months",
     level: "Beginner to Advanced",
     tag: "🏆 Career Track",
+    path: "/courses/QCSP",
     desc: "Comprehensive cybersecurity training covering offensive and defensive security, AI-powered workflows, cloud security, and professional career preparation.",
     topics: [
       "Web App Security",
@@ -370,7 +371,7 @@ const APPROVALS = [
   },
   {
     name: "Startup India",
-    logo:StartupIndLogo ,
+    logo: StartupIndLogo,
   },
   {
     name: "Startup Mission",
@@ -631,14 +632,10 @@ const Home = () => {
           </div>
 
           {/* Hero image */}
-  {/* Hero Video */}
-<div className="relative " >
-  <VedioPlayer src={heroVideo}
-height="600px"
-  />
-  
- 
-</div>
+          {/* Hero Video */}
+          <div className="relative ">
+            <VedioPlayer src={heroVideo} height="600px" />
+          </div>
         </div>
       </section>
 
@@ -677,73 +674,89 @@ height="600px"
         </div>
       </section>
 
-     
       {/* ══ WHY CYBER SECURITY ════════════════════════════ */}
-     <section
-  style={{
-    background: "#f8fafc",
-    padding: "80px 24px",
-    position: "relative",
-    overflow: "hidden",
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      backgroundImage:
-        "radial-gradient(circle at 10% 50%,rgba(14,165,233,0.05) 0%,transparent 50%)",
-    }}
-  />
-  <div className="max-w-6xl mx-auto" style={{ position: "relative" }}>
-    <div className="text-center mb-14">
-      <h2
-        className="text-3xl font-bold mb-3"
-        style={{ letterSpacing: "-0.01em", color: "#0f172a" }}
+      <section
+        style={{
+          background: "#f8fafc",
+          padding: "80px 24px",
+          position: "relative",
+          overflow: "hidden",
+        }}
       >
-        Why Build a Career in Cyber Security?
-      </h2>
-      <p style={{ color: "#64748b", maxWidth: 480, margin: "0 auto" }}>
-        The fastest-growing tech field of the decade — and the most
-        secure.
-      </p>
-    </div>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-      {WHY_CYBER.map((c) => (
         <div
-          key={c.label}
-          className="rounded-2xl p-6 transition-all"
           style={{
-            background: "#fff",
-            border: "1px solid #e2e8f0",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
-            cursor: "default",
+            position: "absolute",
+            inset: 0,
+            backgroundImage:
+              "radial-gradient(circle at 10% 50%,rgba(14,165,233,0.05) 0%,transparent 50%)",
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#f0f9ff";
-            e.currentTarget.style.borderColor = "#7dd3fc";
-            e.currentTarget.style.boxShadow = "0 8px 24px rgba(14,165,233,0.12)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#fff";
-            e.currentTarget.style.borderColor = "#e2e8f0";
-            e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.04)";
-          }}
-        >
-          <div style={{ fontSize: 32, marginBottom: 10 }}>{c.icon}</div>
-          <div className="text-2xl font-bold mb-1" style={{ color: "#0284c7" }}>{c.stat}</div>
-          <div style={{ color: "#0ea5e9", fontSize: 12, marginBottom: 6, fontWeight: 700 }}>
-            {c.label}
+        />
+        <div className="max-w-6xl mx-auto" style={{ position: "relative" }}>
+          <div className="text-center mb-14">
+            <h2
+              className="text-3xl font-bold mb-3"
+              style={{ letterSpacing: "-0.01em", color: "#0f172a" }}
+            >
+              Why Build a Career in Cyber Security?
+            </h2>
+            <p style={{ color: "#64748b", maxWidth: 480, margin: "0 auto" }}>
+              The fastest-growing tech field of the decade — and the most
+              secure.
+            </p>
           </div>
-          <div className="text-sm" style={{ color: "#64748b" }}>{c.desc}</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {WHY_CYBER.map((c) => (
+              <div
+                key={c.label}
+                className="rounded-2xl p-6 transition-all"
+                style={{
+                  background: "#fff",
+                  border: "1px solid #e2e8f0",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                  cursor: "default",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f0f9ff";
+                  e.currentTarget.style.borderColor = "#7dd3fc";
+                  e.currentTarget.style.boxShadow =
+                    "0 8px 24px rgba(14,165,233,0.12)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#fff";
+                  e.currentTarget.style.borderColor = "#e2e8f0";
+                  e.currentTarget.style.boxShadow =
+                    "0 2px 8px rgba(0,0,0,0.04)";
+                }}
+              >
+                <div style={{ fontSize: 32, marginBottom: 10 }}>{c.icon}</div>
+                <div
+                  className="text-2xl font-bold mb-1"
+                  style={{ color: "#0284c7" }}
+                >
+                  {c.stat}
+                </div>
+                <div
+                  style={{
+                    color: "#0ea5e9",
+                    fontSize: 12,
+                    marginBottom: 6,
+                    fontWeight: 700,
+                  }}
+                >
+                  {c.label}
+                </div>
+                <div className="text-sm" style={{ color: "#64748b" }}>
+                  {c.desc}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* ══ FEATURED COURSES ══════════════════════════════ */}
       <section
+        id="courses"
         style={{
           background: "#f8fafc",
           borderTop: "1px solid #e2e8f0",
@@ -766,17 +779,6 @@ height="600px"
                 Featured Training Programs
               </h2>
             </div>
-            <button
-              to="/courses"
-              className="text-sm font-semibold px-5 py-2.5 rounded-xl"
-              style={{
-                background: "#f0f9ff",
-                color: "#0ea5e9",
-                border: "1px solid #bae6fd",
-              }}
-            >
-              View all →
-            </button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             {COURSES.map((c, i) => (
@@ -858,8 +860,8 @@ height="600px"
                       </li>
                     ))}
                   </ul>
-                  <button
-                    to="/courses"
+                  <Link
+                    to={c.path}
                     className="block w-full py-2.5 rounded-xl font-semibold text-sm text-center transition-all"
                     style={{
                       background: "linear-gradient(135deg,#e0f2fe,#dbeafe)",
@@ -877,7 +879,7 @@ height="600px"
                     }}
                   >
                     Enroll Now →
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -1238,24 +1240,24 @@ height="600px"
               Our Approvals
             </h2>
           </div>
-         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center">
-  {APPROVALS.map((item) => (
-    <div
-      key={item.name}
-      className="flex flex-col items-center justify-center"
-    >
-      <img
-        src={item.logo}
-        alt={item.name}
-        className="h-12 object-contain"
-      />
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center">
+            {APPROVALS.map((item) => (
+              <div
+                key={item.name}
+                className="flex flex-col items-center justify-center"
+              >
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  className="h-12 object-contain"
+                />
 
-      <p className="mt-2 text-xs text-center font-medium">
-        {item.name}
-      </p>
-    </div>
-  ))}
-</div>
+                <p className="mt-2 text-xs text-center font-medium">
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -1378,8 +1380,8 @@ height="600px"
             cybersecurity with Kerala's most trusted training academy.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              to="/courses"
+            <a
+              href="#courses"
               className="font-bold px-8 py-3.5 rounded-xl transition-all"
               style={{
                 background: "#fff",
@@ -1397,7 +1399,7 @@ height="600px"
               }}
             >
               Browse Courses
-            </Link>
+            </a>
             <Link
               to="/contact"
               className="font-bold px-8 py-3.5 rounded-xl transition-all"
