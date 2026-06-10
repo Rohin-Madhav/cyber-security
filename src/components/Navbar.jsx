@@ -18,7 +18,7 @@ const Navbar = () => {
             alt="QNAYDS Logo"
             className="h-14 object-contain transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="hidden sm:inline text-xl font-bold bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent group-hover:from-cyan-500 group-hover:to-blue-500 transition-all duration-300">
+          <span className="hidden sm:inline text-xl font-bold tracking-wider font-[Orbitron] bg-linear-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
             QNAYDS
           </span>
         </Link>
@@ -164,34 +164,14 @@ const Navbar = () => {
                         color: "#0f172a",
                       }}
                     >
-                      Advanced Penetration Testing
+                      QNAYDS Cyber Security Professional
                     </div>
                     <div
                       style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}
                     >
-                      CPT Certification Program
+                      QCSP Certification Program
                     </div>
                   </div>
-                </Link>
-
-                {/* view all footer */}
-                <Link
-                  to="/courses"
-                  className="flex items-center justify-between px-5 py-3 transition-all"
-                  style={{ background: "#f8fafc" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.background = "#e0f2fe")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.background = "#f8fafc")
-                  }
-                >
-                  <span
-                    style={{ fontSize: 13, fontWeight: 600, color: "#0ea5e9" }}
-                  >
-                    View all courses
-                  </span>
-                  <span style={{ color: "#0ea5e9" }}>→</span>
                 </Link>
               </div>
             )}
@@ -310,7 +290,7 @@ const Navbar = () => {
                     }}
                     className="text-sm text-gray-600 hover:text-cyan-600"
                   >
-                    Advanced Penetration Testing
+                    QNAYDS Cyber Security Professional(QCSP)
                   </Link>
                 </div>
               )}
