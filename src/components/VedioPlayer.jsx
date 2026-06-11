@@ -1,7 +1,7 @@
 import { useRef,useState,useEffect } from "react";
 
 
-const VideoPlayer = ({ src,height='400px' }) => {
+const VedioPlayer = ({ src,height='400px' }) => {
   const vidRef = useRef(null);
   const progressRef = useRef(null);
   const [playing, setPlaying] = useState(false);
@@ -142,4 +142,4 @@ const VideoPlayer = ({ src,height='400px' }) => {
   );
 };
 
-export default VideoPlayer
+export default VedioPlayer;
