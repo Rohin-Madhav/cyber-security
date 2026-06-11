@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import CehHero from "../../assets/Courses/Ceh/CEH_Hero.webp"
-import CehImg2 from "../../assets/Courses/Ceh/CEH_Img2.webp"
+import CehHero from "../../assets/Courses/Ceh/CEH_Hero.webp";
+import CehImg2 from "../../assets/Courses/Ceh/CEH_Img2.webp";
+import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 // ── RESPONSIVE HOOK ───────────────────────────────────────
 const useIsMobile = () => {
@@ -36,7 +38,7 @@ const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
     className={`${height} ${className} rounded-2xl overflow-hidden`}
     style={{
       background: "linear-gradient(135deg,#e0f2fe,#f0f9ff)",
-      border: "2px dashed #7dd3fc",
+      border: "none",
     }}
   >
     {src ? (
@@ -274,7 +276,7 @@ const FAQS = [
   },
   {
     q: "Will I receive a certificate?",
-    a: "Yes — an AICTE-aligned certificate is issued on successful completion of all 15 days and lab assessments.",
+    a: "Yes — an AICTE-aligned certificate is issued on successful completion of all 30 days and lab assessments.",
   },
   {
     q: "Are classes online or offline?",
@@ -290,15 +292,16 @@ const FAQS = [
   },
 ];
 
-const TABS = ["syllabus", "tools", "outcomes", "faq"];
+const TABS = ["modules", "tools", "outcomes", "faq"];
 
 // ── COMPONENT ─────────────────────────────────────────────
 const Ceh = () => {
   const isMobile = useIsMobile();
-  const [tab, setTab] = useState("syllabus");
+  const [tab, setTab] = useState("modules");
   const [openDay, setOpenDay] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
+  const naviagte = useNavigate();
 
   const hov = (e) => {
     e.currentTarget.style.transform = "translateY(-2px)";
@@ -319,10 +322,12 @@ const Ceh = () => {
         boxShadow: "0 8px 40px rgba(14,165,233,0.1)",
       }}
     >
-      <ImgBox 
-      src={CehImg2}
-      label="Course preview thumbnail" height={170} />
-      
+      <ImgBox
+        src={CehImg2}
+        label="Ethical Hacking Lab Training at QNAYDS"
+        height={170}
+      />
+
       <div style={{ padding: 22 }}>
         <div
           style={{
@@ -333,10 +338,10 @@ const Ceh = () => {
           }}
         >
           <Tag color="#dc2626">Beginner → Advanced</Tag>
-          <Tag color="#0ea5e9">15 Days</Tag>
+          <Tag color="#0ea5e9">30 Days</Tag>
         </div>
         {[
-          ["📅", "Duration", "15 Days"],
+          ["📅", "Duration", "30 Days"],
           ["🖥️", "Mode", "Online + Offline"],
           ["🗣️", "Language", "English / Malayalam"],
           ["👥", "Batch Size", "15–20 Students"],
@@ -362,6 +367,7 @@ const Ceh = () => {
           </div>
         ))}
         <button
+          onClick={() => naviagte("/contact")}
           style={{
             width: "100%",
             marginTop: 18,
@@ -420,7 +426,7 @@ const Ceh = () => {
             📞 Need Help?
           </div>
           <a
-            href="tel:+917907564898"
+            href="tel:+9190748 71204"
             style={{
               fontSize: 13,
               color: "#0284c7",
@@ -429,7 +435,7 @@ const Ceh = () => {
               display: "block",
             }}
           >
-            +91-7907564898
+            +91-9074871204
           </a>
           <a
             href="tel:+919400968397"
@@ -458,6 +464,20 @@ const Ceh = () => {
         overflowX: "hidden",
       }}
     >
+      <Helmet>
+        <title>
+          Ethical Hacking Course in Kerala | Ethical Hacking Mastery | QNAYDS
+        </title>
+        <meta
+          name="description"
+          content="Best Ethical Hacking Course in Kerala with certification. Learn CEH Training, Kali Linux, OSINT, Social Engineering & Penetration Testing through 30 days of hands-on practical labs at QNAYDS Academy."
+        />
+        <meta
+          name="keywords"
+          content="Ethical Hacking Course in Kerala, CEH Training in Kerala, Kali Linux Training, Ethical Hacking Training with Certification, cybersecurity course Kerala, ethical hacking Malappuram"
+        />
+        <link rel="canonical" href="https://www.qnayds.com/courses/CEH" />
+      </Helmet>
       {/* ── HERO ── */}
       <section
         style={{
@@ -520,7 +540,7 @@ const Ceh = () => {
               }}
             >
               <Tag color="#dc2626">Beginner to Advanced</Tag>
-              <Tag color="#0ea5e9">🕐 15 Days</Tag>
+              <Tag color="#0ea5e9">🕐 30 Days</Tag>
               <Tag color="#16a34a">✅ Certificate</Tag>
             </div>
             <h1
@@ -535,9 +555,21 @@ const Ceh = () => {
                 marginBottom: 16,
               }}
             >
-              Ethical Hacking{" "}
-              <span style={{ color: "#0ea5e9", position: "relative" }}>
-                Masterclass
+              {/* ✅ SEO Primary H1 keyword */}
+              Ethical Hacking Course in Kerala
+              <br />
+              {/* ✅ Visual subline — catchy, keeps design feel */}
+              <span
+                style={{
+                  color: "#0ea5e9",
+                  position: "relative",
+                  display: "inline-block",
+                  fontSize: isMobile
+                    ? "clamp(1.1rem,5vw,1.6rem)"
+                    : "clamp(1.2rem,2.5vw,1.9rem)",
+                }}
+              >
+                Ethical Hacking Masterclass
                 <svg
                   style={{
                     position: "absolute",
@@ -568,7 +600,7 @@ const Ceh = () => {
                 maxWidth: 480,
               }}
             >
-              A comprehensive 15-day hands-on course — from introduction to
+              A comprehensive 30-day hands-on course — from introduction to
               ethical hacking all the way to OSINT, red teaming, dark web,
               anonymity, and advanced Linux.
             </p>
@@ -585,7 +617,7 @@ const Ceh = () => {
               }}
             >
               {[
-                ["15", "Days"],
+                ["30", "Days"],
                 ["10+", "Tools"],
                 ["60+", "Lab Hrs"],
                 ["AICTE", "Certified"],
@@ -662,10 +694,10 @@ const Ceh = () => {
           {!isMobile && (
             <div style={{ position: "relative" }}>
               <ImgBox
-              src={CehHero}
-                label="Ethical hacking course — lab / students / hacker workstation"
+                src={CehHero}
+                label="Ethical Hacking Lab Training at QNAYDS"
                 height={150}
-              /> 
+              />
             </div>
           )}
         </div>
@@ -685,10 +717,6 @@ const Ceh = () => {
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: "#64748b" }}>
-              📅 Next Batch:{" "}
-              <strong style={{ color: "#0284c7" }}>July 2026</strong>
-            </div>
             <div style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}>
               ⭐ Rated 4.9/5 · AICTE Certified
             </div>
@@ -821,7 +849,7 @@ const Ceh = () => {
         {/* LEFT */}
         <div>
           {/* SYLLABUS TAB */}
-          {tab === "syllabus" && (
+          {tab === "modules" && (
             <div>
               <h2
                 style={{
@@ -831,10 +859,10 @@ const Ceh = () => {
                   marginBottom: 6,
                 }}
               >
-                Daily Syllabus
+                Daily Modules
               </h2>
               <p style={{ color: "#64748b", fontSize: 13, marginBottom: 20 }}>
-                15 intensive days — tap any day to expand.
+                30 intensive days — tap any day to expand.
               </p>
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 10 }}
@@ -898,7 +926,7 @@ const Ceh = () => {
                             lineHeight: 1,
                           }}
                         >
-                          DAY
+                          MOD
                         </span>
                         <span
                           style={{
@@ -1138,7 +1166,7 @@ const Ceh = () => {
                 What You'll Learn
               </h2>
               <p style={{ color: "#64748b", fontSize: 13, marginBottom: 20 }}>
-                After completing all 15 days, here's what you'll be able to do:
+                After completing all 30 days, here's what you'll be able to do:
               </p>
               <div
                 style={{

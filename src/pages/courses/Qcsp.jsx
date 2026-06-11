@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import QcspHero from "../../assets/Courses/Qcsp/QCSP_Hero.webp";
 import QcspImg2 from "../../assets/Courses/Qcsp/QCSP_img2.webp";
+import { Helmet } from "react-helmet-async";
 
 // ── RESPONSIVE HOOK ───────────────────────────────────────
 const useIsMobile = () => {
@@ -37,7 +38,7 @@ const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
     className={`${height} ${className} rounded-2xl overflow-hidden`}
     style={{
       background: "linear-gradient(135deg,#e0f2fe,#f0f9ff)",
-      border: "2px dashed #7dd3fc",
+      border: "none",
     }}
   >
     {src ? (
@@ -349,7 +350,11 @@ export default function Qcsp() {
         boxShadow: "0 8px 40px rgba(14,165,233,0.1)",
       }}
     >
-      <ImgBox src={QcspImg2} label="Course preview thumbnail" height={170} />
+      <ImgBox
+        src={QcspImg2}
+        label="QNAYDS Cyber Security Professional Course"
+        height={170}
+      />
       <div style={{ padding: 22 }}>
         <div
           style={{
@@ -455,7 +460,7 @@ export default function Qcsp() {
             📞 Need Help?
           </div>
           <a
-            href="tel:+917907564898"
+            href="tel:+919074871204"
             style={{
               fontSize: 13,
               color: "#0284c7",
@@ -464,7 +469,7 @@ export default function Qcsp() {
               display: "block",
             }}
           >
-            +91-7907564898
+            +91-9074871204
           </a>
           <a
             href="tel:+919400968397"
@@ -496,6 +501,20 @@ export default function Qcsp() {
         overflowX: "hidden",
       }}
     >
+      <Helmet>
+        <title>
+          QNAYDS Cyber Security Professional | Cyber Security Training in Kerala
+        </title>
+        <meta
+          name="description"
+          content="Best Cyber Security Training in Kerala with CEH v13 preparation. Learn Penetration Testing, SOC Analyst skills, Network Security, VAPT, Cloud Security & AI-integrated labs at QNAYDS Academy, Manjeri Kerala."
+        />
+        <meta
+          name="keywords"
+          content="Cyber Security Training in Kerala, SOC Analyst Course in Kerala, Penetration Testing Course in Kerala, Network Security Training in Kerala, cybersecurity course Malappuram, CEH training Kerala, VAPT course Kerala"
+        />
+        <link rel="canonical" href="https://www.qnayds.com/courses/QCSP" />
+      </Helmet>
       {/* ══ HERO ══════════════════════════════════════════ */}
       <section
         style={{
@@ -547,7 +566,7 @@ export default function Qcsp() {
             <div style={{ fontSize: 12, color: "#94a3b8", marginBottom: 14 }}>
               Home <span style={{ margin: "0 6px" }}>›</span> Courses{" "}
               <span style={{ margin: "0 6px" }}>›</span>
-              <span style={{ color: "#0284c7" }}>Advanced Cybersecurity</span>
+              <span style={{ color: "#0284c7" }}>QCSP</span>
             </div>
 
             <div
@@ -576,9 +595,21 @@ export default function Qcsp() {
                 marginBottom: 16,
               }}
             >
-              Advanced{" "}
-              <span style={{ color: "#0ea5e9", position: "relative" }}>
-                Cybersecurity
+              {/* ✅ SEO Primary H1 — exact target keyword */}
+              QNAYDS Cyber Security Professional (QCSP)
+              <br />
+              {/* ✅ Visual subline — keyword-rich, keeps design */}
+              <span
+                style={{
+                  color: "#0ea5e9",
+                  position: "relative",
+                  display: "inline-block",
+                  fontSize: isMobile
+                    ? "clamp(1rem,4.5vw,1.4rem)"
+                    : "clamp(1.1rem,2.2vw,1.7rem)",
+                }}
+              >
+                Cyber Security Training in Kerala
                 <svg
                   style={{
                     position: "absolute",
@@ -586,11 +617,11 @@ export default function Qcsp() {
                     left: 0,
                     width: "100%",
                   }}
-                  viewBox="0 0 280 8"
+                  viewBox="0 0 340 8"
                   fill="none"
                 >
                   <path
-                    d="M2 6 Q70 2 140 5 Q210 8 278 4"
+                    d="M2 6 Q85 2 170 5 Q255 8 338 4"
                     stroke="#0ea5e9"
                     strokeWidth="2.5"
                     strokeLinecap="round"
@@ -598,10 +629,8 @@ export default function Qcsp() {
                     opacity="0.45"
                   />
                 </svg>
-              </span>{" "}
-              Professional Training
+              </span>
             </h1>
-
             <p
               style={{
                 fontSize: 14,
@@ -750,7 +779,7 @@ export default function Qcsp() {
             <div style={{ position: "relative" }}>
               <ImgBox
                 src={QcspHero}
-                label="Advanced cybersecurity training — lab / students image"
+                label="QNAYDS Cyber Security Professional Course"
                 height={150}
               />
             </div>
@@ -772,10 +801,6 @@ export default function Qcsp() {
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: "#64748b" }}>
-              📅 Next Batch:{" "}
-              <strong style={{ color: "#0284c7" }}>July 2026</strong>
-            </div>
             <div style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}>
               ⭐ 4.9/5 · CEH v13 Aligned
             </div>
