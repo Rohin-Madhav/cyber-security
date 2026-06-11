@@ -18,7 +18,7 @@ import StartupKlLogo from "../assets/logo/StartUpMission.png";
 import TbiLogo from "../assets/logo/TBI_Logo.png";
 import heroVideo from "../assets/Videos/cyber-hero.mp4";
 import VedioPlayer from "../components/VedioPlayer";
-
+import { Helmet } from "react-helmet-async";
 // ── IMAGE PLACEHOLDER ─────────────────────────────────
 const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
   <div
@@ -440,6 +440,31 @@ const Home = () => {
         overflowX: "hidden",
       }}
     >
+      <Helmet>
+        <title>
+          Cyber Security Course in Kerala | Ethical Hacking Training &
+          Certification | QNAYDS
+        </title>
+        <meta
+          name="description"
+          content="Join Kerala's #1 Cyber Security Academy. Learn Ethical Hacking, Penetration Testing, SOC Analysis & Network Security with AICTE certification, internship & placement assistance. Trusted by 10,000+ students."
+        />
+        <meta
+          name="keywords"
+          content="Cyber Security Course in Kerala, Ethical Hacking Course Kerala, Cyber Security Training Kerala, CEH Training Kerala, Penetration Testing Course Kerala, cybersecurity academy Malappuram"
+        />
+        <link rel="canonical" href="https://www.qnayds.com/" />
+        <meta
+          property="og:title"
+          content="Cyber Security Course in Kerala | QNAYDS Academy"
+        />
+        <meta
+          property="og:description"
+          content="Kerala's #1 Cyber Security Academy — Ethical Hacking, CEH, SOC Analyst & Penetration Testing courses with AICTE certification and 95% placement rate."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.qnayds.com/" />
+      </Helmet>
       {/* ══ HERO ══════════════════════════════════════════ */}
       <section
         style={{
@@ -513,7 +538,7 @@ const Home = () => {
             </div>
 
             <h1
-              className="font-bold leading-tight mb-6"
+              className="font-bold leading-tight mb-3"
               style={{
                 fontSize: "clamp(2.4rem,5vw,3.8rem)",
                 color: "#0f172a",
@@ -521,6 +546,21 @@ const Home = () => {
                 lineHeight: 1.1,
               }}
             >
+              <span
+                style={{
+                  display: "block",
+                  fontSize: "clamp(1rem,2vw,1.3rem)",
+                  fontWeight: 800,
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  color: "#0284c7",
+                  marginBottom: 25,
+                }}
+              >
+                Cyber Security Course in Kerala
+              </span>
+
+              {/* Visual bold headline */}
               <span
                 style={{
                   color: "#94a3b8",
@@ -563,17 +603,21 @@ const Home = () => {
                 </svg>
               </span>
               <br />
-              <span style={{ color: "#0f172a" }}>We Train.</span>
+              <span style={{ color: "#0f172a", marginBottom: "25" }}>
+                We Train.
+              </span>
             </h1>
 
+            {/* Supporting description */}
             <p
-              className="text-lg leading-relaxed mb-8"
+              className="text-base leading-relaxed mb-8"
               style={{ color: "#475569", maxWidth: 480 }}
             >
-              Master Ethical Hacking, Penetration Testing &amp; Cyber Defense
-              with India's most hands-on cybersecurity academy — trusted by{" "}
+              Build industry-ready skills with practical labs, real-world
+              projects, and globally recognized certifications — trusted by{" "}
               <strong style={{ color: "#0284c7" }}>10,000+ students</strong> and{" "}
-              <strong style={{ color: "#0284c7" }}>100+ institutions</strong>.
+              <strong style={{ color: "#0284c7" }}>100+ institutions</strong>{" "}
+              across India.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
