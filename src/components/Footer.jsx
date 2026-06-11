@@ -2,8 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer = ({
   brandName = "QNAYDS",
-  description =
-    "Empowering future cyber security professionals through practical, industry-focused training and certification programs.",
+  description = "QNAYDS is a leading Cyber Security Training Institute in Kerala offering Ethical Hacking, Penetration Testing, SOC Analyst, and Network Security courses with certification, internship, and placement assistance.",
   quickLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
@@ -15,12 +14,8 @@ const Footer = ({
   ],
   contact = {
     address: "Manjeri, Kerala",
-    phones: [
-      "+91-7907564898",
-      "+91-9400968397",
-      "+91-9074871204",
-    ],
-    emails: ["career.qnayds@gmail.com", "qnayds7@gmail.com"],
+    phones: ["+91-7907564898", "+91-9400968397", "+91-9074871204"],
+    emails: ["qnayds7@gmail.com"],
     website: "https://qnayds.in",
   },
   social = {
@@ -36,25 +31,49 @@ const Footer = ({
     const common = "cursor-pointer hover:text-white transition-colors";
     if (type === "linkedin")
       return (
-        <a href={href} aria-label="LinkedIn" target="_blank" rel="noreferrer" className={common}>
+        <a
+          href={href}
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noreferrer"
+          className={common}
+        >
           <FaLinkedin />
         </a>
       );
     if (type === "instagram")
       return (
-        <a href={href} aria-label="Instagram" target="_blank" rel="noreferrer" className={common}>
+        <a
+          href={href}
+          aria-label="Instagram"
+          target="_blank"
+          rel="noreferrer"
+          className={common}
+        >
           <FaInstagram />
         </a>
       );
     if (type === "facebook")
       return (
-        <a href={href} aria-label="Facebook" target="_blank" rel="noreferrer" className={common}>
+        <a
+          href={href}
+          aria-label="Facebook"
+          target="_blank"
+          rel="noreferrer"
+          className={common}
+        >
           <FaFacebook />
         </a>
       );
     if (type === "youtube")
       return (
-        <a href={href} aria-label="YouTube" target="_blank" rel="noreferrer" className={common}>
+        <a
+          href={href}
+          aria-label="YouTube"
+          target="_blank"
+          rel="noreferrer"
+          className={common}
+        >
           <FaYoutube />
         </a>
       );
@@ -123,23 +142,52 @@ const Footer = ({
           <ul className="space-y-3 text-sm">
             <li>📍 {contact.address}</li>
             {contact.phones.map((p) => (
-              <li key={p}>📞 <a href={`tel:${p.replace(/[^+0-9]/g, "")}`} className="hover:text-white">{p}</a></li>
+              <li key={p}>
+                📞{" "}
+                <a
+                  href={`tel:${p.replace(/[^+0-9]/g, "")}`}
+                  className="hover:text-white"
+                >
+                  {p}
+                </a>
+              </li>
             ))}
             {contact.emails?.map((e) => (
-              <li key={e}>✉️ <a href={`mailto:${e}`} className="hover:text-white">{e}</a></li>
+              <li key={e}>
+                ✉️{" "}
+                <a href={`mailto:${e}`} className="hover:text-white">
+                  {e}
+                </a>
+              </li>
             ))}
-            <li>🌐 <a href={contact.website} target="_blank" rel="noreferrer" className="hover:text-white">{contact.website.replace(/^https?:\/\//, "")}</a></li>
+            <li>
+              🌐{" "}
+              <a
+                href={contact.website}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white"
+              >
+                {contact.website.replace(/^https?:\/\//, "")}
+              </a>
+            </li>
           </ul>
         </address>
       </div>
 
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>© {year} {brandName} Cyber Security Academy. All Rights Reserved.</p>
+          <p>
+            © {year} {brandName} Cyber Security Academy. All Rights Reserved.
+          </p>
 
           <div className="flex gap-5 mt-3 md:mt-0">
-            <a href="/privacy" className="hover:text-white">Privacy Policy</a>
-            <a href="/terms" className="hover:text-white">Terms & Conditions</a>
+            <a href="/privacy" className="hover:text-white">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="hover:text-white">
+              Terms & Conditions
+            </a>
           </div>
         </div>
       </div>
