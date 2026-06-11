@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SuccessImg from "../assets/About/Success_Img.webp";
-import RishanNk from "../assets/About/Rishan_NK.webp";
+import RishanNk from "../assets/About/Rishan_Nk.webp";
 import SawadKt from "../assets/About/Sawad_KT.webp";
 import { Helmet } from "react-helmet-async";
 

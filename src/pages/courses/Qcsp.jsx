@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import QcspHero from "../../assets/Courses/Qcsp/QCSP_Hero.webp";
-import QcspImg2 from "../../assets/Courses/Qcsp/QCSP_img2.webp";
+import QcspImg2 from "../../assets/Courses/Qcsp/Qcsp_img2.webp";
 import { Helmet } from "react-helmet-async";
 
 // ── RESPONSIVE HOOK ───────────────────────────────────────
