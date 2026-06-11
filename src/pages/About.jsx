@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SuccessImg from "../assets/About/Success_Img.webp";
 import RishanNk from "../assets/About/Rishan_NK.webp";
 import SawadKt from "../assets/About/Sawad_KT.webp";
+import { Helmet } from "react-helmet-async";
 
 // Reuse your ImgBox component
 const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
@@ -10,7 +11,7 @@ const ImgBox = ({ label, src, height = "h-64", className = "" }) => (
     className={`${height} ${className} rounded-2xl overflow-hidden`}
     style={{
       background: "linear-gradient(135deg,#e0f2fe,#f0f9ff)",
-      border: "2px dashed #7dd3fc",
+      border: "none",
     }}
   >
     {src ? (
@@ -75,16 +76,40 @@ const About = () => {
         color: "#1e293b",
       }}
     >
+      <Helmet>
+        <title>
+          About QNAYDS | Kerala's Leading Cyber Security Training Academy
+        </title>
+        <meta
+          name="description"
+          content="QNAYDS is Kerala's most trusted Cyber Security Academy — MSME, AICTE & Kerala Startup Mission approved. Founded in 2020, we've trained 10,000+ students across 100+ institutions in India."
+        />
+        <meta
+          name="keywords"
+          content="About QNAYDS, Cyber Security Academy Kerala, AICTE approved cybersecurity institute, MSME certified training Kerala, ethical hacking institute Malappuram"
+        />
+        <link rel="canonical" href="https://www.qnayds.com/about" />
+        <meta
+          property="og:title"
+          content="About QNAYDS | Cyber Security Academy Kerala"
+        />
+        <meta
+          property="og:description"
+          content="MSME, AICTE & Kerala Startup Mission approved Cyber Security Academy. 10,000+ students trained across 100+ institutions since 2020."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.qnayds.com/about" />
+      </Helmet>
       {/* HERO */}
       <section
-        className="py-20 px-6"
+        className="py-16 px-5"
         style={{
           background: "linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)",
         }}
       >
         <div className="max-w-6xl mx-auto text-center">
           <span
-            className="inline-block text-xs font-semibold px-3 py-1 rounded-full border mb-5"
+            className="inline-block text-xs font-semibold px-3 py-1 rounded-full border mb-4"
             style={{
               background: "#dbeafe",
               color: "#1d4ed8",
@@ -95,14 +120,23 @@ const About = () => {
           </span>
 
           <h1
-            className="text-4xl md:text-5xl font-bold mb-5"
-            style={{ color: "#0f172a" }}
+            className="font-bold mb-4 leading-tight"
+            style={{
+              color: "#0f172a",
+              fontSize: "clamp(1.6rem, 5vw, 3rem)",
+            }}
           >
             Transforming Learning Into
             <span style={{ color: "#0ea5e9" }}> Career Success</span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-lg" style={{ color: "#475569" }}>
+          <p
+            className="max-w-3xl mx-auto leading-relaxed"
+            style={{
+              color: "#475569",
+              fontSize: "clamp(0.95rem, 2.5vw, 1.125rem)",
+            }}
+          >
             Founded in 2020, QNAYDS LLP is a pioneering EdTech company dedicated
             to bridging the gap between academic education and industry
             requirements through practical learning and innovation.
@@ -114,7 +148,7 @@ const About = () => {
       <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         <ImgBox
           src={SuccessImg}
-          label="QNAYDS Team / Office Image"
+          label="collabrate with FitMyJob"
           height="h-130"
         />
 
@@ -136,9 +170,14 @@ const About = () => {
             technology-driven education.
           </p>
 
-          <p className="leading-relaxed" style={{ color: "#475569" }}>
+          <p className="leading-relaxed mb-4" style={{ color: "#475569" }}>
             Our mission is to provide accessible, practical, industry-relevant
             education that empowers students, professionals, and institutions.
+          </p>
+          <p className="leading-relaxed " style={{ color: "#475569" }}>
+            We proudly collabrate with FitMyJob to create stronger placement
+            opportunities,hiring support,career guidance, and industry
+            connections for students
           </p>
         </div>
       </section>
@@ -317,8 +356,7 @@ const About = () => {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link
-            to={"/courses"}
+          <button
             className="font-semibold px-8 py-3 rounded-lg"
             style={{
               background: "#ffffff",
@@ -326,7 +364,7 @@ const About = () => {
             }}
           >
             Explore Courses
-          </Link>
+          </button>
 
           <Link
             to={"/contact"}
