@@ -6,11 +6,13 @@ import About from "./pages/About";
 import Qcsp from "./pages/courses/Qcsp";
 import Contact from "./pages/Contact";
 import Ceh from "./pages/courses/Ceh";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
