@@ -1295,10 +1295,6 @@ const Home = () => {
                   alt={item.name}
                   className="h-12 object-contain"
                 />
-
-                <p className="mt-2 text-xs text-center font-medium">
-                  {item.name}
-                </p>
               </div>
             ))}
           </div>
