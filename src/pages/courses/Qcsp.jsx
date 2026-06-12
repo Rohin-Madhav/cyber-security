@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import QcspHero from "../../assets/Courses/Qcsp/QCSP_Hero.webp";
 import QcspImg2 from "../../assets/Courses/Qcsp/Qcsp_Img2.webp";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 // ── RESPONSIVE HOOK ───────────────────────────────────────
 const useIsMobile = () => {
@@ -329,6 +330,7 @@ export default function Qcsp() {
   const [openMod, setOpenMod] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
   const [showSidebar, setShowSidebar] = useState(false);
+  const navigate = useNavigate();
 
   const hov = (e) => {
     e.currentTarget.style.transform = "translateY(-2px)";
@@ -402,6 +404,7 @@ export default function Qcsp() {
           </div>
         ))}
         <button
+          onClick={() => navigate("/contact")}
           style={{
             width: "100%",
             marginTop: 18,
@@ -422,7 +425,10 @@ export default function Qcsp() {
         >
           Enroll Now →
         </button>
-        <button
+        <a
+          href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20QNAYDS%20Cyber%20Security%20Professional%20(QCSP)%20Course."
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             width: "100%",
             marginTop: 10,
@@ -433,12 +439,14 @@ export default function Qcsp() {
             fontSize: 14,
             borderRadius: 12,
             border: "1.5px solid #0ea5e9",
-            cursor: "pointer",
-            fontFamily: "inherit",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textDecoration: "none",
           }}
         >
           Book Free Demo Class
-        </button>
+        </a>
         <div
           style={{
             marginTop: 18,
@@ -595,21 +603,9 @@ export default function Qcsp() {
                 marginBottom: 16,
               }}
             >
-              {/* ✅ SEO Primary H1 — exact target keyword */}
-              QNAYDS Cyber Security Professional (QCSP)
-              <br />
-              {/* ✅ Visual subline — keyword-rich, keeps design */}
-              <span
-                style={{
-                  color: "#0ea5e9",
-                  position: "relative",
-                  display: "inline-block",
-                  fontSize: isMobile
-                    ? "clamp(1rem,4.5vw,1.4rem)"
-                    : "clamp(1.1rem,2.2vw,1.7rem)",
-                }}
-              >
-                Cyber Security Training in Kerala
+              QNAYDS{" "}
+              <span style={{ color: "#0ea5e9", position: "relative" }}>
+                CYBER SECURITY
                 <svg
                   style={{
                     position: "absolute",
@@ -617,11 +613,11 @@ export default function Qcsp() {
                     left: 0,
                     width: "100%",
                   }}
-                  viewBox="0 0 340 8"
+                  viewBox="0 0 280 8"
                   fill="none"
                 >
                   <path
-                    d="M2 6 Q85 2 170 5 Q255 8 338 4"
+                    d="M2 6 Q70 2 140 5 Q210 8 278 4"
                     stroke="#0ea5e9"
                     strokeWidth="2.5"
                     strokeLinecap="round"
@@ -629,8 +625,10 @@ export default function Qcsp() {
                     opacity="0.45"
                   />
                 </svg>
-              </span>
+              </span>{" "}
+              PROFESSIONAL (QCSP)
             </h1>
+
             <p
               style={{
                 fontSize: 14,
@@ -693,6 +691,7 @@ export default function Qcsp() {
               }}
             >
               <button
+                onClick={() => navigate("/contact")}
                 style={{
                   background: "linear-gradient(135deg,#0ea5e9,#0284c7)",
                   color: "#fff",
@@ -712,7 +711,10 @@ export default function Qcsp() {
               >
                 Enroll Now →
               </button>
-              <button
+              <a
+                href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20QNAYDS%20Cyber%20Security%20Professional%20(QCSP)%20Course."
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   background: "transparent",
                   color: "#0ea5e9",
@@ -734,7 +736,7 @@ export default function Qcsp() {
                 }
               >
                 Free Demo
-              </button>
+              </a>
             </div>
 
             {/* Audience chips — only on desktop */}
