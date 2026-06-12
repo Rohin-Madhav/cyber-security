@@ -388,7 +388,10 @@ const Ceh = () => {
         >
           Enroll Now →
         </button>
-        <button
+        <a
+          href="https://wa.me/9190748 71204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20CEH%20(Ethical%20Hacking)%20Course."
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             width: "100%",
             marginTop: 10,
@@ -399,12 +402,14 @@ const Ceh = () => {
             fontSize: 14,
             borderRadius: 12,
             border: "1.5px solid #0ea5e9",
-            cursor: "pointer",
-            fontFamily: "inherit",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textDecoration: "none",
           }}
         >
           Book Free Demo Class
-        </button>
+        </a>
         <div
           style={{
             marginTop: 18,
@@ -555,21 +560,9 @@ const Ceh = () => {
                 marginBottom: 16,
               }}
             >
-              {/* ✅ SEO Primary H1 keyword */}
-              Ethical Hacking Course in Kerala
-              <br />
-              {/* ✅ Visual subline — catchy, keeps design feel */}
-              <span
-                style={{
-                  color: "#0ea5e9",
-                  position: "relative",
-                  display: "inline-block",
-                  fontSize: isMobile
-                    ? "clamp(1.1rem,5vw,1.6rem)"
-                    : "clamp(1.2rem,2.5vw,1.9rem)",
-                }}
-              >
-                Ethical Hacking Masterclass
+              Ethical Hacking{" "}
+              <span style={{ color: "#0ea5e9", position: "relative" }}>
+                Masterclass
                 <svg
                   style={{
                     position: "absolute",
@@ -645,6 +638,7 @@ const Ceh = () => {
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <button
+                onClick={() => naviagte("/contact")}
                 style={{
                   background: "linear-gradient(135deg,#0ea5e9,#0284c7)",
                   color: "#fff",
@@ -664,7 +658,10 @@ const Ceh = () => {
               >
                 Enroll Now →
               </button>
-              <button
+              <a
+                href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20CEH%20(Ethical%20Hacking)%20Course."
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   background: "transparent",
                   color: "#0ea5e9",
@@ -686,7 +683,7 @@ const Ceh = () => {
                 }
               >
                 Free Demo
-              </button>
+              </a>
             </div>
           </div>
 
