@@ -356,16 +356,6 @@ const About = () => {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <button
-            className="font-semibold px-8 py-3 rounded-lg"
-            style={{
-              background: "#ffffff",
-              color: "#0ea5e9",
-            }}
-          >
-            Explore Courses
-          </button>
-
           <Link
             to={"/contact"}
             className="font-semibold px-8 py-3 rounded-lg"
