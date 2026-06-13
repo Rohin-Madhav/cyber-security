@@ -85,7 +85,7 @@ const Navbar = () => {
                 </div>
 
                 <Link
-                  to="/courses/CEH"
+                  to="/courses/JEH"
                   className="flex items-center gap-4 px-5 py-4 transition-all"
                   onClick={() => setCourseOpen(!courseOpen)}
                   style={{ borderBottom: "1px solid #f0f9ff" }}
@@ -119,12 +119,12 @@ const Navbar = () => {
                         color: "#0f172a",
                       }}
                     >
-                      Certified Ethical Hacker
+                      Junior Ethical Hacker
                     </div>
                     <div
                       style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}
                     >
-                      CEH Certification Program
+                      JEH Certification Program
                     </div>
                   </div>
                 </Link>
@@ -272,14 +272,14 @@ const Navbar = () => {
               {courseOpen && (
                 <div className="mt-3 ml-4 flex flex-col gap-3 border-l-2 border-cyan-200 pl-4">
                   <Link
-                    to="/courses/CEH"
+                    to="/courses/JEH"
                     onClick={() => {
                       setMenuOpen(false);
                       setCourseOpen(false);
                     }}
                     className="text-sm text-gray-600 hover:text-cyan-600"
                   >
-                    Certified Ethical Hacker (CEH)
+                    Junior Ethical Hacker (JEH)
                   </Link>
 
                   <Link
