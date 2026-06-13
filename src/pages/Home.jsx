@@ -101,7 +101,7 @@ const STATS = [
 const LEARNING_PATHS = [
   {
     icon: "🛡️",
-    title: "Certified Ethical Hacker (CEH)",
+    title: "Junior Ethical Hacker (JEH)",
     desc: "Master the tools and techniques used by professional ethical hackers across real enterprise environments.",
     duration: "2 Months",
     level: "Intermediate",
@@ -157,7 +157,7 @@ const COURSES = [
     duration: "30 Days",
     level: "Beginner to Intermediate",
     tag: "🔥 Most Popular",
-    path: "/courses/CEH",
+    path: "/courses/JEH",
     desc: "Learn ethical hacking fundamentals through practical labs, Linux, networking, OSINT, social engineering, cryptography, and red teaming exercises.",
     topics: [
       "Kali Linux & Termux",
@@ -169,7 +169,7 @@ const COURSES = [
   },
 
   {
-    title: "Advanced Cybersecurity Professional",
+    title: "QNAYDS Cyber Security Professional (QCSP)",
     duration: "4-6 Months",
     level: "Beginner to Advanced",
     tag: "🏆 Career Track",
@@ -293,7 +293,7 @@ const CAREERS = [
 const TESTIMONIALS = [
   {
     name: "Arjun Krishnan",
-    course: "CEH Certified",
+    course: "JEH Certified",
     rating: 5,
     text: "QNAYDS completely transformed my career. The hands-on labs gave me real confidence to crack my first pentest interview. Now working at a top MNC in Bangalore.",
     company: "Infosys Security Team",

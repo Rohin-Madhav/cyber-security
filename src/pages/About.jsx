@@ -309,7 +309,7 @@ const About = () => {
             <ImgBox
               src={RishanNk}
               label="Rishan NK"
-              height="h-130"
+              height="h-150"
               className="mb-4"
             />
 
@@ -328,7 +328,7 @@ const About = () => {
             <ImgBox
               src={SawadKt}
               label="Sawad KT"
-              height="h-130"
+              height="h-150"
               className="mb-4"
             />
 
