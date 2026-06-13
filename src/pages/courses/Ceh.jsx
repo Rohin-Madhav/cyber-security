@@ -280,7 +280,7 @@ const FAQS = [
   },
   {
     q: "Are classes online or offline?",
-    a: "Both modes are available — live online Zoom sessions and offline batches at our Manjeri, Kerala centre.",
+    a: " live online Zoom sessions ",
   },
   {
     q: "Do you provide job assistance?",
@@ -342,9 +342,9 @@ const Ceh = () => {
         </div>
         {[
           ["📅", "Duration", "30 Days"],
-          ["🖥️", "Mode", "Online + Offline"],
+          ["🖥️", "Mode", "Online "],
           ["🗣️", "Language", "English / Malayalam"],
-          ["👥", "Batch Size", "15–20 Students"],
+          ["👥", "Batch Size", "40–50 Students"],
           ["🏆", "Certificate", "Yes — AICTE Aligned"],
           ["📱", "Device", "Laptop + Android"],
         ].map(([icon, label, val]) => (
@@ -366,8 +366,9 @@ const Ceh = () => {
             </span>
           </div>
         ))}
-        <button
-          onClick={() => naviagte("/contact")}
+        <a
+          href="/brochures/JEH-brochure.pdf"
+          download
           style={{
             width: "100%",
             marginTop: 18,
@@ -382,14 +383,17 @@ const Ceh = () => {
             fontFamily: "inherit",
             boxShadow: "0 4px 20px rgba(14,165,233,0.3)",
             transition: "all 0.2s",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textDecoration: "none",
+            boxSizing: "border-box",
           }}
-          onMouseEnter={hov}
-          onMouseLeave={lea}
         >
-          Enroll Now →
-        </button>
+          Download Brochure 📄
+        </a>
         <a
-          href="https://wa.me/9190748 71204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20CEH%20(Ethical%20Hacking)%20Course."
+          href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20JEH%20Course."
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -475,13 +479,13 @@ const Ceh = () => {
         </title>
         <meta
           name="description"
-          content="Best Ethical Hacking Course in Kerala with certification. Learn CEH Training, Kali Linux, OSINT, Social Engineering & Penetration Testing through 30 days of hands-on practical labs at QNAYDS Academy."
+          content="Best Ethical Hacking Course in Kerala with certification. Learn JEH Training, Kali Linux, OSINT, Social Engineering & Penetration Testing through 30 days of hands-on practical labs at QNAYDS Academy."
         />
         <meta
           name="keywords"
           content="Ethical Hacking Course in Kerala, CEH Training in Kerala, Kali Linux Training, Ethical Hacking Training with Certification, cybersecurity course Kerala, ethical hacking Malappuram"
         />
-        <link rel="canonical" href="https://www.qnayds.com/courses/CEH" />
+        <link rel="canonical" href="https://www.qnayds.com/courses/JEH" />
       </Helmet>
       {/* ── HERO ── */}
       <section
@@ -659,7 +663,7 @@ const Ceh = () => {
                 Enroll Now →
               </button>
               <a
-                href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20CEH%20(Ethical%20Hacking)%20Course."
+                href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20JEH%20Course."
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -1244,7 +1248,7 @@ const Ceh = () => {
                 }}
               >
                 {[
-                  ["🏆", "CEH Certification", "EC-Council"],
+                  ["🏆", "JEH Certification", "EC-Council"],
                   ["🔓", "OSCP", "Offensive Security"],
                   ["🐛", "Bug Bounty", "HackerOne / Bugcrowd"],
                   ["🛡️", "SOC Analyst", "Blue Team Path"],

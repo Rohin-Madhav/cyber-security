@@ -374,7 +374,7 @@ export default function Qcsp() {
           ["📦", "Modules", "12 Core + 2 Tracks"],
           ["🖥️", "Mode", "Online + Offline"],
           ["🗣️", "Language", "English / Malayalam"],
-          ["👥", "Batch Size", "15–20 Students"],
+          ["👥", "Batch Size", "40–50 Students"],
           ["🏆", "Certificate", "CEH v13 Aligned"],
           ["💼", "Placement", "100% Support"],
         ].map(([icon, label, val]) => (
@@ -403,8 +403,9 @@ export default function Qcsp() {
             </span>
           </div>
         ))}
-        <button
-          onClick={() => navigate("/contact")}
+        <a
+          href="/brochures/QCSP-brochure.pdf"
+          download
           style={{
             width: "100%",
             marginTop: 18,
@@ -419,12 +420,15 @@ export default function Qcsp() {
             fontFamily: "inherit",
             boxShadow: "0 4px 20px rgba(14,165,233,0.3)",
             transition: "all 0.2s",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textDecoration: "none",
+            boxSizing: "border-box",
           }}
-          onMouseEnter={hov}
-          onMouseLeave={lea}
         >
-          Enroll Now →
-        </button>
+          Download Brochure 📄
+        </a>
         <a
           href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20QNAYDS%20Cyber%20Security%20Professional%20(QCSP)%20Course."
           target="_blank"
