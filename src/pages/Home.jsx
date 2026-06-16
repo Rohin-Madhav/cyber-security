@@ -1293,7 +1293,7 @@ const Home = () => {
                 <img
                   src={item.logo}
                   alt={item.name}
-                  className="h-12 object-contain"
+                  className="h-20 object-contain"
                 />
               </div>
             ))}
