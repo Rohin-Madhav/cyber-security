@@ -164,7 +164,7 @@ const Navbar = () => {
                         color: "#0f172a",
                       }}
                     >
-                      QNAYDS Cyber Security Professional
+                      Qnayds certified security professional
                     </div>
                     <div
                       style={{ fontSize: 12, color: "#64748b", marginTop: 2 }}
@@ -290,7 +290,7 @@ const Navbar = () => {
                     }}
                     className="text-sm text-gray-600 hover:text-cyan-600"
                   >
-                    QNAYDS Cyber Security Professional(QCSP)
+                    Qnayds certified security professional(QCSP)
                   </Link>
                 </div>
               )}

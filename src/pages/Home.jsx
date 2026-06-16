@@ -169,7 +169,7 @@ const COURSES = [
   },
 
   {
-    title: "QNAYDS Cyber Security Professional (QCSP)",
+    title: "Qnayds certified security professional (QCSP)",
     duration: "4-6 Months",
     level: "Beginner to Advanced",
     tag: "🏆 Career Track",

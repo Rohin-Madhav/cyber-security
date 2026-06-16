@@ -354,7 +354,7 @@ export default function Qcsp() {
     >
       <ImgBox
         src={QcspImg2}
-        label="QNAYDS Cyber Security Professional Course"
+        label="Qnayds certified security professional Course"
         height={170}
       />
       <div style={{ padding: 22 }}>
@@ -515,7 +515,8 @@ export default function Qcsp() {
     >
       <Helmet>
         <title>
-          QNAYDS Cyber Security Professional | Cyber Security Training in Kerala
+          Qnayds certified security professional | Cyber Security Training in
+          Kerala
         </title>
         <meta
           name="description"
@@ -609,7 +610,7 @@ export default function Qcsp() {
             >
               QNAYDS{" "}
               <span style={{ color: "#0ea5e9", position: "relative" }}>
-                CYBER SECURITY
+                CERTIFIED SECURITY
                 <svg
                   style={{
                     position: "absolute",
@@ -617,11 +618,11 @@ export default function Qcsp() {
                     left: 0,
                     width: "100%",
                   }}
-                  viewBox="0 0 280 8"
+                  viewBox="0 0 320 8"
                   fill="none"
                 >
                   <path
-                    d="M2 6 Q70 2 140 5 Q210 8 278 4"
+                    d="M2 6 Q80 2 160 5 Q240 8 318 4"
                     stroke="#0ea5e9"
                     strokeWidth="2.5"
                     strokeLinecap="round"
@@ -632,7 +633,6 @@ export default function Qcsp() {
               </span>{" "}
               PROFESSIONAL (QCSP)
             </h1>
-
             <p
               style={{
                 fontSize: 14,
@@ -785,7 +785,7 @@ export default function Qcsp() {
             <div style={{ position: "relative" }}>
               <ImgBox
                 src={QcspHero}
-                label="QNAYDS Cyber Security Professional Course"
+                label="Qnayds certified security professional Course"
                 height={150}
               />
             </div>

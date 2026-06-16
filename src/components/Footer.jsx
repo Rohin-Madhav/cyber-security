@@ -10,7 +10,7 @@ const Footer = ({
   ],
   courses = [
     { label: "Ethical Hacking", href: "/courses/JEH" },
-    { label: "QNAYDS Cyber Security Professional", href: "/courses/QCSP" },
+    { label: "Qnayds certified security professional", href: "/courses/QCSP" },
   ],
   contact = {
     address: "Manjeri, Kerala",
