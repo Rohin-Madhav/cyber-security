@@ -9,7 +9,7 @@ const Footer = ({
     { label: "Contact", href: "/contact" },
   ],
   courses = [
-    { label: "Ethical Hacking", href: "/courses/JEH" },
+    { label: "Junior Ethical Hacker", href: "/courses/JEH" },
     { label: "Qnayds certified security professional", href: "/courses/QCSP" },
   ],
   contact = {
