@@ -344,7 +344,7 @@ const Ceh = () => {
           ["📅", "Duration", "30 Days"],
           ["🖥️", "Mode", "Online "],
           ["🗣️", "Language", "English / Malayalam"],
-          ["👥", "Batch Size", "40–50 Students"],
+          ["👥", "Batch Size", "15–20 Students"],
           ["🏆", "Certificate", "Yes — AICTE Aligned"],
           ["📱", "Device", "Laptop + Android"],
         ].map(([icon, label, val]) => (
@@ -1248,10 +1248,11 @@ const Ceh = () => {
                 }}
               >
                 {[
-                  ["🏆", "JEH Certification", "EC-Council"],
+                  ["🏆", "JEH Certification", "Recognized by MSME"],
                   ["🔓", "OSCP", "Offensive Security"],
                   ["🐛", "Bug Bounty", "HackerOne / Bugcrowd"],
                   ["🛡️", "SOC Analyst", "Blue Team Path"],
+                  ["🚀", "QCSP", "Qnayds Certified Security Professional "],
                 ].map(([icon, title, sub]) => (
                   <div
                     key={title}

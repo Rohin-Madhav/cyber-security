@@ -364,22 +364,27 @@ const APPROVALS = [
   {
     name: "AICTE",
     logo: AicteLogo,
+    link:"https://www.aicte.gov.in"
   },
   {
     name: "Ministry of MSME",
     logo: MsmeLogo,
+    link:"https://msme.gov.in"
   },
   {
     name: "Startup India",
     logo: StartupIndLogo,
+    link:"https://www.startupindia.gov.in"
   },
   {
     name: "Startup Mission",
     logo: StartupKlLogo,
+    link:"https://startupmission.kerala.gov.in"
   },
   {
     name: "TBI",
     logo: TbiLogo,
+    links:"https://tbicet.in"
   },
 ];
 
@@ -557,7 +562,7 @@ const Home = () => {
                   marginBottom: 25,
                 }}
               >
-                Cyber Security Course in Kerala
+                 Best Cyber Security Institute Kerala
               </span>
 
               {/* Visual bold headline */}
@@ -1285,18 +1290,25 @@ const Home = () => {
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center">
-            {APPROVALS.map((item) => (
-              <div
-                key={item.name}
-                className="flex flex-col items-center justify-center"
-              >
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="h-20 object-contain"
-                />
-              </div>
-            ))}
+           {APPROVALS.map((item) => (
+  <div
+    key={item.name}
+    className="flex flex-col items-center justify-center"
+  >
+    <a
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Visit ${item.name} Official Website`}
+    >
+      <img
+        src={item.logo}
+        alt={`${item.name} Official Logo`}
+        className="h-20 object-contain hover:scale-105 transition-transform duration-300"
+      />
+    </a>
+  </div>
+))}
           </div>
         </div>
       </section>

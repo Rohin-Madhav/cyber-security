@@ -374,7 +374,7 @@ export default function Qcsp() {
           ["📦", "Modules", "12 Core + 2 Tracks"],
           ["🖥️", "Mode", "Online + Offline"],
           ["🗣️", "Language", "English / Malayalam"],
-          ["👥", "Batch Size", "40–50 Students"],
+          ["👥", "Batch Size", "15–20 Students"],
           ["🏆", "Certificate", "CEH v13 Aligned"],
           ["💼", "Placement", "100% Support"],
         ].map(([icon, label, val]) => (
@@ -642,7 +642,7 @@ export default function Qcsp() {
                 maxWidth: 490,
               }}
             >
-              Master the art of cyber defense in{" "}
+              Master the art of cyber offense and defense in{" "}
               <strong style={{ color: "#0284c7" }}>4 to 6 months</strong>.
               Equipped with AI integration, hands-on projects, and real-world
               threat simulation.
