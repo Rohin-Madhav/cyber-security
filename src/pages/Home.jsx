@@ -364,27 +364,27 @@ const APPROVALS = [
   {
     name: "AICTE",
     logo: AicteLogo,
-    link:"https://www.aicte.gov.in"
+    link: "https://www.aicte.gov.in",
   },
   {
     name: "Ministry of MSME",
     logo: MsmeLogo,
-    link:"https://msme.gov.in"
+    link: "https://msme.gov.in",
   },
   {
     name: "Startup India",
     logo: StartupIndLogo,
-    link:"https://www.startupindia.gov.in"
+    link: "https://www.startupindia.gov.in",
   },
   {
     name: "Startup Mission",
     logo: StartupKlLogo,
-    link:"https://startupmission.kerala.gov.in"
+    link: "https://startupmission.kerala.gov.in",
   },
   {
     name: "TBI",
     logo: TbiLogo,
-    links:"https://tbicet.in"
+    links: "https://tbicet.in",
   },
 ];
 
@@ -399,7 +399,7 @@ const FAQS = [
   },
   {
     q: "Do you provide practical/hands-on training?",
-    a: "70% of your learning time is spent in live cyber labs. You'll work with real tools like Kali Linux, Burp Suite, Metasploit, and more.",
+    a: "80% of your learning time is spent in live cyber labs. You'll work with real tools like Kali Linux, Burp Suite, Metasploit, and more.",
   },
   {
     q: "Do you provide job assistance?",
@@ -446,29 +446,40 @@ const Home = () => {
       }}
     >
       <Helmet>
-        <title>
-          Cyber Security Course in Kerala | Ethical Hacking Training &
-          Certification | QNAYDS
-        </title>
+        <title>Cyber Security Course in Kerala | QNAYDS Academy</title>
+
         <meta
           name="description"
-          content="Join Kerala's #1 Cyber Security Academy. Learn Ethical Hacking, Penetration Testing, SOC Analysis & Network Security with AICTE certification, internship & placement assistance. Trusted by 10,000+ students."
+          content="Cyber Security Course in Kerala with hands-on Ethical Hacking, Penetration Testing and SOC Analyst training. Start your cybersecurity career."
         />
-        <meta
-          name="keywords"
-          content="Cyber Security Course in Kerala, Ethical Hacking Course Kerala, Cyber Security Training Kerala, CEH Training Kerala, Penetration Testing Course Kerala, cybersecurity academy Malappuram"
-        />
-        <link rel="canonical" href="https://www.qnayds.com/" />
+
         <meta
           property="og:title"
           content="Cyber Security Course in Kerala | QNAYDS Academy"
         />
+
         <meta
           property="og:description"
-          content="Kerala's #1 Cyber Security Academy — Ethical Hacking, CEH, SOC Analyst & Penetration Testing courses with AICTE certification and 95% placement rate."
+          content="Cyber Security Course in Kerala with hands-on Ethical Hacking, Penetration Testing and SOC Analyst training."
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.qnayds.com/" />
+
+        <meta property="og:image" content="https://qnayds.in/og-image.webp" />
+
+        <meta property="og:url" content="https://qnayds.in" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Cyber Security Course in Kerala | QNAYDS Academy"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Cyber Security Course in Kerala with hands-on Ethical Hacking, Penetration Testing and SOC Analyst training."
+        />
+
+        <meta name="twitter:image" content="https://qnayds.in/og-image.webp" />
       </Helmet>
       {/* ══ HERO ══════════════════════════════════════════ */}
       <section
@@ -543,6 +554,20 @@ const Home = () => {
             </div>
 
             <h1
+              style={{
+                display: "block",
+                fontSize: "clamp(1rem,2vw,1.3rem)",
+                fontWeight: 800,
+                letterSpacing: "0.04em",
+                textTransform: "uppercase",
+                color: "#0284c7",
+                marginBottom: 25,
+              }}
+            >
+              Best Cyber Security Course in Kerala
+            </h1>
+
+            <h1
               className="font-bold leading-tight mb-3"
               style={{
                 fontSize: "clamp(2.4rem,5vw,3.8rem)",
@@ -551,20 +576,6 @@ const Home = () => {
                 lineHeight: 1.1,
               }}
             >
-              <span
-                style={{
-                  display: "block",
-                  fontSize: "clamp(1rem,2vw,1.3rem)",
-                  fontWeight: 800,
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                  color: "#0284c7",
-                  marginBottom: 25,
-                }}
-              >
-                 Best Cyber Security Institute Kerala
-              </span>
-
               {/* Visual bold headline */}
               <span
                 style={{
@@ -618,11 +629,15 @@ const Home = () => {
               className="text-base leading-relaxed mb-8"
               style={{ color: "#475569", maxWidth: 480 }}
             >
-              Build industry-ready skills with practical labs, real-world
-              projects, and globally recognized certifications — trusted by{" "}
+              Build industry-ready cybersecurity skills with practical labs,
+              real-world projects, and globally recognized certifications. Join
+              Kerala's leading{" "}
+              <strong style={{ color: "#0284c7" }}>
+                Cyber Security Course
+              </strong>{" "}
+              trusted by{" "}
               <strong style={{ color: "#0284c7" }}>10,000+ students</strong> and{" "}
-              <strong style={{ color: "#0284c7" }}>100+ institutions</strong>{" "}
-              across India.
+              <strong style={{ color: "#0284c7" }}>100+ institutions</strong>.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
@@ -1290,25 +1305,25 @@ const Home = () => {
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center">
-           {APPROVALS.map((item) => (
-  <div
-    key={item.name}
-    className="flex flex-col items-center justify-center"
-  >
-    <a
-      href={item.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Visit ${item.name} Official Website`}
-    >
-      <img
-        src={item.logo}
-        alt={`${item.name} Official Logo`}
-        className="h-20 object-contain hover:scale-105 transition-transform duration-300"
-      />
-    </a>
-  </div>
-))}
+            {APPROVALS.map((item) => (
+              <div
+                key={item.name}
+                className="flex flex-col items-center justify-center"
+              >
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${item.name} Official Website`}
+                >
+                  <img
+                    src={item.logo}
+                    alt={`${item.name} Official Logo`}
+                    className="h-20 object-contain hover:scale-105 transition-transform duration-300"
+                  />
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
