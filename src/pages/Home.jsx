@@ -453,33 +453,38 @@ const Home = () => {
           content="Cyber Security Course in Kerala with hands-on Ethical Hacking, Penetration Testing and SOC Analyst training. Start your cybersecurity career."
         />
 
+        <link rel="canonical" href="https://hackers-academy.qnayds.in/" />
+
+        <meta name="robots" content="index, follow" />
+
         <meta
           property="og:title"
           content="Cyber Security Course in Kerala | QNAYDS Academy"
         />
-
         <meta
           property="og:description"
           content="Cyber Security Course in Kerala with hands-on Ethical Hacking, Penetration Testing and SOC Analyst training."
         />
-
-        <meta property="og:image" content="https://qnayds.in/og-image.webp" />
-
-        <meta property="og:url" content="https://qnayds.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hackers-academy.qnayds.in/" />
+        <meta
+          property="og:image"
+          content="https://hackers-academy.qnayds.in/og-image.webp"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
-
         <meta
           name="twitter:title"
           content="Cyber Security Course in Kerala | QNAYDS Academy"
         />
-
         <meta
           name="twitter:description"
           content="Cyber Security Course in Kerala with hands-on Ethical Hacking, Penetration Testing and SOC Analyst training."
         />
-
-        <meta name="twitter:image" content="https://qnayds.in/og-image.webp" />
+        <meta
+          name="twitter:image"
+          content="https://hackers-academy.qnayds.in/og-image.webp"
+        />
       </Helmet>
       {/* ══ HERO ══════════════════════════════════════════ */}
       <section
