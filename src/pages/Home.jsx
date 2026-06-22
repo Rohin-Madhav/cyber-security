@@ -572,7 +572,7 @@ const Home = () => {
               Best Cyber Security Course in Kerala
             </h1>
 
-            <h1
+            <h2
               className="font-bold leading-tight mb-3"
               style={{
                 fontSize: "clamp(2.4rem,5vw,3.8rem)",
@@ -581,7 +581,6 @@ const Home = () => {
                 lineHeight: 1.1,
               }}
             >
-              {/* Visual bold headline */}
               <span
                 style={{
                   color: "#94a3b8",
@@ -595,6 +594,7 @@ const Home = () => {
               >
                 They Attack.
               </span>
+
               <span
                 style={{
                   color: "#0ea5e9",
@@ -623,12 +623,11 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              <br />
-              <span style={{ color: "#0f172a", marginBottom: "25" }}>
-                We Train.
-              </span>
-            </h1>
 
+              <br />
+
+              <span style={{ color: "#0f172a" }}>We Train.</span>
+            </h2>
             {/* Supporting description */}
             <p
               className="text-base leading-relaxed mb-8"
