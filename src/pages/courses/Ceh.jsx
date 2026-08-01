@@ -641,8 +641,8 @@ const Ceh = () => {
             </div>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <button
-                onClick={() => naviagte("/contact")}
+              <a
+                href="https://jeh.qnayds.in/"
                 style={{
                   background: "linear-gradient(135deg,#0ea5e9,#0284c7)",
                   color: "#fff",
@@ -661,7 +661,7 @@ const Ceh = () => {
                 onMouseLeave={lea}
               >
                 Enroll Now →
-              </button>
+              </a>
               <a
                 href="https://wa.me/919074871204?text=Hi%20QNAYDS,%20I%20would%20like%20to%20book%20a%20free%20demo%20class%20for%20the%20JEH%20Course."
                 target="_blank"
